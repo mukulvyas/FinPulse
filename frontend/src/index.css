@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  /* === FinPulse Design System: Exact Stitch Tokens === */
+
+  /* Primary: IDBI Maroon */
+  --color-primary: #610000;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #8b0000;
+  --color-on-primary-container: #ff907f;
+  --color-primary-fixed: #ffdad4;
+  --color-primary-fixed-dim: #ffb4a8;
+  --color-on-primary-fixed: #410000;
+  --color-on-primary-fixed-variant: #920703;
+  --color-inverse-primary: #ffb4a8;
+
+  /* Secondary: Gold */
+  --color-secondary: #7c5800;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fec65a;
+  --color-on-secondary-container: #745200;
+  --color-secondary-fixed: #ffdea7;
+  --color-secondary-fixed-dim: #f5be53;
+  --color-on-secondary-fixed: #271900;
+  --color-on-secondary-fixed-variant: #5e4200;
+
+  /* Tertiary: Green */
+  --color-tertiary: #003508;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #004e10;
+  --color-on-tertiary-container: #71c16d;
+  --color-tertiary-fixed: #a3f69c;
+  --color-tertiary-fixed-dim: #88d982;
+  --color-on-tertiary-fixed: #002204;
+  --color-on-tertiary-fixed-variant: #005312;
+
+  /* Error */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Surface */
+  --color-background: #fcf9f8;
+  --color-on-background: #1c1b1b;
+  --color-surface: #fcf9f8;
+  --color-on-surface: #1c1b1b;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-bright: #fcf9f8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container: #f0eded;
+  --color-surface-container-high: #eae7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-on-surface-variant: #5a403c;
+  --color-surface-variant: #e5e2e1;
+  --color-inverse-surface: #313030;
+  --color-inverse-on-surface: #f3f0ef;
+  --color-surface-tint: #b52619;
+
+  /* Outline */
+  --color-outline: #8e706b;
+  --color-outline-variant: #e3beb8;
+
+  /* Custom semantic */
+  --color-amber: #F57C00;
+  --color-gold: #C8962E;
+
+  /* Typography */
+  --font-family-display: "Poppins", sans-serif;
+  --font-family-headline: "Poppins", sans-serif;
+  --font-family-body: "Noto Sans", sans-serif;
+  --font-family-label: "Noto Sans", sans-serif;
+
+
+}
+
+/* Base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #fcf9f8;
+  color: #1c1b1b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display, .font-headline {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Material icons */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Score ring animation */
+@keyframes score-fill {
+  from { stroke-dashoffset: var(--dash-total); }
+  to { stroke-dashoffset: var(--dash-offset); }
+}
+
+.score-arc {
+  animation: score-fill 1.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f0eded; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #e3beb8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8e706b; }
+
+/* Soft card shadow */
+.card-shadow {
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Status badge colors */
+.badge-approve {
+  background: #a3f69c;
+  color: #002204;
+}
+.badge-review {
+  background: #fec65a;
+  color: #271900;
+}
+.badge-reject {
+  background: #ffdad6;
+  color: #93000a;
+}
+.badge-ntc {
+  background: #dde1ff;
+  color: #001a40;
+}
+.badge-ntb {
+  background: #ffdea7;
+  color: #271900;
+}
